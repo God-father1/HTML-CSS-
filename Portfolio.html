@@ -1,0 +1,155 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+	body
+{
+  background: black;
+  z-index: 1;
+  color: white;
+}
+
+#navbar
+{ float:right;
+  position: fixed;
+  z-index: 2;
+  margin: 0;
+  background: linear-gradient(to right, #5b127a, purple,#3a0e4d,purple,#3a0e4d,purple, #5b127a);
+  text-align: center;
+  width: 100%;
+  top: 0px;
+  padding: 20px;
+  margin-left: -10px;
+
+}
+
+.navbar-link
+{ 
+  text-decoration: none;
+  font-family: Monotype Corsiva;
+  padding: 50px;
+  font-size: 35px;
+   color:white;
+}
+  #navbar a {
+	float: right;
+	display: block;
+	color: #f2f2f2;
+	text-align: left;
+	padding: 12px;
+	font-size: 1em;
+  opacity:0.4;
+  transition: transform .2s;
+}
+#navbar a:hover {
+	background-color: #12c2e6;
+	color: white;
+  border: none;
+  border-radius:10px;
+  opacity:1.0;
+   transform: scale(1.5);
+}
+
+#welcome-section
+{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  padding-top: 100px;
+  margin-top: 100px;
+  display: relative;
+  height: 100vh;
+}
+
+#projects
+{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.project-tile
+{
+  display: inline-block;
+  border: 1px solid black;
+  padding-bottom: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+hr
+{
+  margin-top: 30px;
+}
+
+#profile-link
+{
+  display: inline;
+  top: 30px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+@media (max-width: 768px)
+{
+  .navbar-link
+  {
+    display: block:
+  }
+}
+</style>
+</head>
+<body>
+<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+-->
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav id="navbar">
+  <a class="navbar-link" href="#tribute_page" alt="Link to tribute page">Tribute Page</a>
+  <a class="navbar-link" href="#survey_form" alt="Link to survey form">Survey Form</a>
+  <a class="navbar-link" href="#product_landing_page" alt="Link to product landing page">Product Landing Page</a>
+  <a class="navbar-link" href="#technical_documentation_page" alt="Link to technical documentation page">Technical Documentation Page</a>
+</nav><br>
+<div id="welcome-section">
+  <h1>Welcome to my personal portfolio!</h1>
+</div>
+<div id="projects">
+  <h2>These are some of my projects</h2>
+  <a class="project-tile" href="https://codepen.io/some__one/pen/gOpjJZj" target="_blank">
+    Tribute Page
+  </a>
+  <a id="tribute_page" class="project-tile" href="https://codepen.io/some__one/pen/rNVZMZQ" alt="Survey form" target="_blank">
+    Survey Form
+  </a>
+  <a id="survey_form" class="project-tile" href="https://codepen.io/some__one/pen/MWwqbLg" target="_blank">
+    Product Landing Page
+  </a>
+  <a id="product_landing_page" class="project-tile" href="https://codepen.io/some__one/pen/wvaExLB" target="_blank">
+    Technical Documentation Page
+  </a>
+  <hr>
+  <br>
+
+  <a id="profile-link" href="https://github.com/God-father1" target="_blank"> 
+      <i class="fa fa-github" style="font-size:36px"></i></a>
+  <a id="profile-link" href="https://in.linkedin.com/in/balkrishnaharode" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+  
+                                                                     
+</div>
+
+</body>
+</html>

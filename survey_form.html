@@ -1,0 +1,129 @@
+<html>
+<style media="screen">
+main{
+	background-image: url("https://scx1.b-cdn.net/csz/news/800/2019/snowfall.jpg");
+  background-size:  cover;
+background-repeat: no-repeat;
+}
+	.first{
+		float:center;
+	}
+	.second{
+		width: 450px;
+		background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+		padding: 30px 30px 15px 30px;
+		border: none;
+		border-radius: 5%;
+		opacity: 0.9;
+		color: white;
+		font-size: 20px;
+	}
+label,input{
+		width:300px;
+		height:auto;
+
+margin:10px;
+	}
+	select,textarea,input{
+		border: 1px;
+		border-radius: 5px;
+	}
+
+h1,p{
+	padding:-5px;
+	color:white;
+}
+
+#dropdown{
+	padding:5px;
+	margin:10px;
+}
+fieldset{
+	border:none;
+}
+
+.title{	width: 500px;
+	border:1px 5px 2px 5px solid;
+  background: rgb(2,0,36);
+background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+}
+</style>
+
+
+<main>
+
+<div align=center class="first">
+  <div class="title">
+	<h1 id="title">Survey Form </h1>
+	<p id="description"><em>Simple survey form for taking tech intrest in note.</em></p>
+  </div>
+  <div class="second">
+	<form class="form" id="survey-form" action="" method="post">
+	<label name="name" id="name-label">Name
+		<br>
+		<input type="name" for="name" id="name" placeholder="Enter your name" required>
+		<br> </label>
+		<label name="email" id="email-label">Email Id
+			<br>
+			<input type="email" for="email" id="email" placeholder="Enter your email address" required>
+			<br></label>
+			<label name="number" id="number-label">Age
+				<br>
+				<input type="number" for="number" id="number" placeholder="Enter age"  min="1" max="100">
+				<br></label>
+				<label name="dropdown" id="dropdown">Which option best describes your current role?
+					<br>
+					<select id="dropdown" requird>
+						<option value="NULL"></option>
+						<option value="Student">Student</option>
+						<option value="FTL">Full time learner</option>
+						<option value="PTL">Part time learner</option>
+						<option value="Teacher">Teacher</option>
+
+						<option value="Professional">Professional</option>
+						<option value="Worker">Worker</option>
+					</select>
+					<br></label>
+
+				<fieldset><legend>Select Gender</legend>
+					<br>
+					<input type="radio" id="male" name="gender" value="male" class="radio">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female" class="radio">
+  <label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other" class="radio">
+  <label for="other">Other</label>
+</fieldset>
+			<br>
+			<fieldset><legend> What languages are you intersted in?</legend>
+			<br>
+
+			<input type="checkbox" value="Python">Python
+			<br>
+			<input type="checkbox" value="Java">Java
+			<br>
+			<input type="checkbox" value="C++">C++
+
+			<br>
+			<input type="checkbox" value="C">C
+
+			<br>
+			<input type="checkbox" value="Lua">Lua
+
+			<br>
+
+			<input type="checkbox" value="JavaScript">JavaScript
+		</fieldset>
+<br>
+<label> Any comments or additional feedback?</label>
+<br>
+<textarea rows="5" cols="40"></textarea>
+<br>
+<button type="submit" value="Submit" id="submit">Submit</button>
+	</form>
+</div>
+
+</div>
+</main>
+</html>
