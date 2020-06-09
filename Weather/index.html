@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+       WeatherApplication </title>
+       <link rel = "icon" href =  
+      "https://icon2.cleanpng.com/20180420/shq/kisspng-logo-drawing-sunlight-5ada77e8273b36.5549389915242669841607.jpg" 
+              type = "image/x-icon">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+ 
+<style>
+  #me{
+    background-image: url(" https://source.unsplash.com/1700x500/?nature");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(0) contrast(2) opacity(0.7);
+  }
+#myimg{
+  border: none;
+  border-radius: 50%;
+}
+
+</style>
+    
+</head>
+<body>
+
+    <header class="text-gray-500 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            
+            
+            <span class="ml-3 text-xl">Weather Application</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-white" href="#sbyname">Home</a>
+            
+            
+            <a class="mr-5 hover:text-white" href="#me">Contact me</a>
+          </nav>
+           
+          </button>
+        </div>
+      </header>
+    <!-- <div class="text-gray-500 body-font bg-gray-900">
+      <section class="text-gray-500 bg-gray-900 body-font relative">
+        <div class="absolute inset-0 bg-gray-900">
+          <iframe  width="100%" height="100%" frameborder="0.2" marginheight="0" marginwidth="0" scrolling="no" src=" https://source.unsplash.com/1700x500/?nature"  style="filter: grayscale(0) contrast(2) opacity(0.7);"></iframe>
+    </div>
+    <h1 id="temperature"></h1>
+    <br>
+    <br>
+    <br>
+    
+
+    <h2 id="description"></h2>
+    <br>
+    <br>
+    <br>
+
+    <p id="location"></p>
+    <br>
+    <br>
+    <br>
+      </section>     
+    </div>-->
+ 
+      <section class="text-gray-500 bg-gray-900 body-font relative" id="sbyname">
+        <div class="absolute inset-0 bg-gray-900">
+          <iframe  width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="https://source.unsplash.com/1700x900/?ocean"  style="filter: grayscale(1) contrast(1.2) opacity(0.3); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;"></iframe>
+    </div>
+        <div class="container px-5 py-24 mx-auto flex">
+          <div class="lg:w-1/3 md:w-1/2 bg-gray-900 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+            <h2 class="text-white text-lg mb-1 font-medium title-font">Search here</h2>
+            
+            <input action="javascript:document.location.reload()" class="bg-gray-800 text-white rounded border border-gray-700 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" type="search" id="search" placeholder="City" autofocus>
+            <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit" onclick="cityW()">Submit</button>
+            <p class="text-xs text-gray-600 mt-3">Enter the city name to check weather.</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="total" class="hidden">
+      <section class="text-gray-500 body-font bg-gray-900">
+        <div class="container px-5 py-24 mx-auto">
+          
+          <div class="flex flex-col text-center w-full mb-20">
+            <img class=" float-right hidden" src=" " id="flag" />
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1" id="country"> </h2>
+            
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white" id="city"> </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base" id="info"></p>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="xl:w-1/4 lg:w-1 md:w-full px-10 py-6 border-l-2 border-gray-800" >
+              <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2" >Sunrise</h2>
+              <p class="leading-relaxed text-base mb-4" id="sunr"></p>
+              <img src="" alt="" id="sunrp">
+             
+              
+             
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+              <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Sunset</h2>
+              <p class="leading-relaxed text-base mb-4" id="suns"></p>
+              <img src="" alt="" id="sunsp">
+              
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+              <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Weather</h2>
+              <p class="leading-relaxed text-base mb-4" id="weather"></p>
+              <img src="" alt="" id="wp">
+              
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+              <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Pressure and Humidity</h2>
+              <p class="leading-relaxed text-base mb-4" id="p&h"></p>
+              <img src="" alt="" id="hpp">
+              
+            </div>
+          </div>
+        
+          
+        </div>
+      </section>
+    </div>
+      
+
+
+    
+
+      <section class="text-gray-500 bg-gray-900 body-font" id="me">
+        <div class="container px-5 py-24 mx-auto flex flex-col">
+          <div class="lg:w-4/6 mx-auto">
+            <div class="rounded-lg h-64 overflow-hidden">
+
+              <img alt="content" class="object-cover object-center h-full w-full" src="https://source.unsplash.com/1200x500/?coding,technology,parallex">
+            </div>
+            <div class="flex flex-col sm:flex-row mt-10">
+              <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-100 h-100" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <img src="data:image/jpeg;base64,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" id="myimg"/>
+                  </svg>
+                  
+                </div>
+                <div class="flex flex-col items-center text-center justify-center">
+                  <h2 class="font-medium title-font mt-4 text-white text-lg">Balkrishna Harode</h2>
+                  <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                  <p class="text-base text-gray-600">Student at International Institute of Profrssional Studies, Indore.</p>
+                </div>
+              </div>
+              <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                <p class="leading-relaxed text-lg mb-4">"Hi I’m Balkrishna and I will be graduating from DAVV University  in 2022 with a degree in Computer Science. My interests are in Front End Engineering and I love to create beautiful performant products with delightful user experiences.
+
+                    Back in school, I designed and built a web application. It receives over a million pageviews a month and is used by over 40,000 DAVV students and even some professors. It is built using a modern web technology stack - React, Redux, Jest, Babel, Flow, webpack and is mobile-responsive.</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+   
+
+      <footer class="text-gray-500 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              
+           
+            <span class="ml-3 text-xl"><a href="#sbyname">Weather Application</a></span>
+          </a>
+          <p class="text-sm text-gray-600 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2020  —
+            <a href="https://wa.me/916260538863" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@balaharode</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-600" href="https://www.facebook.com/Bala.Harode">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-600" href="https://wa.me/balaharode">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-600" href="https://www.instagram.com/balaharode/">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-600" href="https://in.linkedin.com/in/balkrishnaharode">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+</body>
+<script src="app.js"></script>
+
+</html>
